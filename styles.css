@@ -1,0 +1,15 @@
+/* 
+font
+font-family: 'Contrail One', cursive;
+font-family: 'Kalam', cursive;
+font-family: 'Sue Ellen Francisco', cursive;
+*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all .3s;
+}
+body{
+    background-color: red;
+}
