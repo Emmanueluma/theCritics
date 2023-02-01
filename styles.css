@@ -1,15 +1,241 @@
 /* 
 font
 font-family: 'Contrail One', cursive;
+formal
 font-family: 'Kalam', cursive;
+italic and curs
 font-family: 'Sue Ellen Francisco', cursive;
+long and curs
 */
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    transition: all .3s;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+    font-family: 'Contrail One', cursive;
+    text-decoration: none;
+}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+html::-webkit-scrollbar-track {
+    background: #fff;
+}
+html::-webkit-scrollbar-thumb {
+    background: #10221b;
 }
 body{
-    background-color: red;
+    background-color: #000;
+    color: #fff;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+header .overlay,
+header .overlay001{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+header .overlay001{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+header .overlay001 .logo {
+    width: 350px;
+    height: 210px;
+    position: sticky;
+    top: 50px;
+}
+header .overlay001 .logo img {
+    width: 100%;
+    height: 100%;
+    filter: invert(100%) sepia(0%) saturate(27%) hue-rotate(38deg) brightness(106%) contrast(107%);
+    object-fit: cover;
+}
+header nav {
+    padding: 30px;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+header nav button {
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    color: #fff;
+    background-color: transparent;
+    font-size: 3rem;
+    cursor: pointer;
+    z-index: 900;
+}
+header nav .stuff {
+    background-color: rgba(0, 0, 0, 0.884);
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    clip-path: polygon(5% 0, 100% 0, 100% 0, 0 0, 0 10%, 0 0);
+    z-index: 100;
+    transition: all .3s;
+}
+header nav .stuff.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+header nav .stuff a{
+    font-size: 4rem;
+    font-family: 'Kalam', cursive;
+    color: rgba(255, 255, 255, 0.719);
+}
+header nav .stuff a:hover {
+    color: #fff;
+}
+header nav .stuff a p {
+    position: absolute;
+    font-size: 10rem;
+    color: rgba(255, 255, 255, 0.277);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    display: none;
+}
+header nav .stuff a.home:hover p.home1 {
+    display: block;
+}
+header nav .stuff a.about:hover p.about1 {
+    display: block;
+}
+header nav .stuff a.films:hover p.films1 {
+    display: block;
+}
+header section.home{
+    border: 2px solid #f00;
+    margin-top: 150px;
+    width: 100%;
+    height: calc(100vh - 150px);
+    position: relative;
+}
+header section.home img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+main section {
+    text-align: center;
+    padding: 30px;
+}
+main section.about {
+    width: 100%;
+}
+main section h2 {
+    font-size: 10rem;
+}
+main section.about .flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    /* border: 2px solid #fff; */
+}
+main section.about .flex-container .flex-item{
+    width: 100%;
+    /* border: 2px solid #f00; */
+}
+main section.about .flex-container .flex-item.one {
+    height: auto;
+    text-align: left;
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+main section.about .flex-container .flex-item.one p {
+    font-family: 'Kalam', cursive;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+main section.about .flex-container .flex-item.two{
+    width: 100%;
+    height: 400px;
+}
+main section.about .flex-container .flex-item.two img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%);
+    z-index: -1;
+}
+main section.contact{
+    padding: 30px;
+}
+main section.contact .flex-contanier{
+    width: 100%;
+    height: 600px;
+    border: 2px solid #0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main section.contact .flex-contanier .flex-item {
+    width: 50%;
+    height: 100%;
+    border: 2px solid red;
+}
+@media screen and (min-width: 1400px) {
+    body{
+        background-color: redss;
+    }
+    main section.about .flex-container {
+        width: 100%;
+        height: 450px;
+        flex-direction: row;
+    }
+    main section.about .flex-container .flex-item.one{
+        width: 50%;
+        height: 100%;
+    }
+    main section.about .flex-container .flex-item.two{
+        width: 50%;
+        height: 100%;
+    }
+    main section.about .flex-container .flex-item.one p {
+        margin-bottom: 0;
+    }
+    main section.about .flex-container .flex-item.two img{
+        clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+    }
 }
