@@ -1,7 +1,23 @@
 const menuBtn = document.getElementById('menuBtn');
 const stuff = document.getElementById('stuff');
 const navIcons = document.querySelectorAll('.navIcons');
+const nav = document.querySelector('.nav');
+const nav002 = document.querySelector('.nav002');
+const blur = document.querySelector('.blur');
 
+
+window.onscroll = function(){
+    if(window.pageYOffset > 100){
+        nav.style.backgroundColor = '#000';
+        nav002.style.color = '#fff';
+        blur.style.filter = 'blur(5px)';
+    
+    }else {
+        nav.style.backgroundColor = 'transparent';
+        nav002.style.color = 'transparent';
+        blur.style.filter = 'blur(0px)'
+    }
+}
 
 menuBtn.addEventListener('click', e => {
     if(menuBtn.classList.contains('fa-bars')){

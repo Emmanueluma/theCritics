@@ -97,7 +97,7 @@ header nav {
     position: fixed;
     top: 10px;
     left: 20px;
-    background-color: #000;
+    background-color: transparent;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -116,6 +116,7 @@ header nav button {
 }
 header nav p {
     font-size: 2rem;
+    color: transparent;
 }
 header nav .stuff {
     background-color: rgba(0, 0, 0, 0.884);
