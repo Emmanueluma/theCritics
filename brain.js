@@ -20,17 +20,14 @@ menuBtn.addEventListener('click', e => {
 
 const btnS =document.getElementById('btnS');
 const form =  document.getElementById('form')
-
+const name1 = document.getElementById('name');
+const email = document.getElementById('email');
+const subject = document.getElementById('subject');
+const message = document.getElementById('message');
 
 form.addEventListener('submit', e => {
     e.preventDefault();
-})
 
-btnS.addEventListener('click', e =>{
-    const name1 = document.getElementById('name');
-    const email = document.getElementById('email');
-    const subject = document.getElementById('subject');
-    const message = document.getElementById('message');
     const send = async () =>  {
         const body1 = 
         `Name: ${name1.value} </br>
@@ -38,7 +35,7 @@ btnS.addEventListener('click', e =>{
         Subject: ${subject.value} </br>
         message: ${message.value}
         `;
-        console.log(name1.value,email.value,subject.value,message.value)
+        /* console.log(name1.value,email.value,subject.value,message.value) */
     e.preventDefault();
     Email.send({
         SecureToken : "d3782a77-1d2c-4f12-8850-c4913226cb27",
@@ -47,18 +44,36 @@ btnS.addEventListener('click', e =>{
         Subject : "New message for the Critics company",
         Body : body1
     }).then(
-      message => alert(message)
-    ).catch(data => {
+      message => {
+        const popside = document.querySelector('.popside');
+        popside.style.display = 'flex';
+        popside.style.transform = 'translateX(-30%)';
+        setTimeout(e => {
+            popside.style.display = 'none';
+        },2000)
+    }).catch(data => {
         alert('error')
     });
     }
     send();
+
     name1.value = '';
     email.value = '';
     subject.value = '';
     message.value = '';
-
 })
 
-const f = '5A786BAF0F2606A3F2469D5746BD39659180';
-const Password = ' d3782a77-1d2c-4f12-8850-c4913226cb27'
+
+
+//const f = '5A786BAF0F2606A3F2469D5746BD39659180';
+//const Password = ' d3782a77-1d2c-4f12-8850-c4913226cb27';
+
+
+
+
+const popside = document.querySelector('.popside');
+popside.style.display = 'flex';
+popside.style.transform = 'translateX(-30%)';
+setTimeout(e => {
+    popside.style.display = 'none';
+},2000)

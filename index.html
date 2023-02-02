@@ -16,6 +16,7 @@
 <body>
     <!-- header starts -->
     <header id="home">
+        <p class="popside">sent</p>
         <div class="overlay">
             <img src="./images/bg.jpg" alt="">
         </div>
@@ -92,10 +93,10 @@
                 <form id="form" class="flex-item two" method="post">
                     <h1>DROP US A MESSAGE</h1>
                     <div class="form001">
-                        <input type="text" name="Name" id="name" placeholder="your name*">
-                        <input type="email" name="Email address" id="email" placeholder="email address*">
-                        <input type="text" name="Subject" id="subject" placeholder="subject*">
-                        <textarea name="message" id="message" placeholder="message*"></textarea>
+                        <input type="text" name="Name" id="name" placeholder="your name*" required>
+                        <input type="email" name="Email address" id="email" placeholder="email address*" required>
+                        <input type="text" name="Subject" id="subject" placeholder="subject*" required>
+                        <textarea name="message" id="message" placeholder="message*" required></textarea>
                         <button id="btnS" type="submit">send message</button>
                     </div>
 
