@@ -7,7 +7,7 @@ const blur = document.querySelector('.blur');
 
 
 window.onscroll = function(){
-    if(window.pageYOffset > 100){
+    if(window.pageYOffset > 200){
         nav.style.backgroundColor = '#000';
         nav002.style.color = '#fff';
         blur.style.filter = 'blur(5px)';
