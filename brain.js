@@ -43,13 +43,18 @@ btnS.addEventListener('click', e =>{
         SecureToken : "d3782a77-1d2c-4f12-8850-c4913226cb27",
         To : "umaemmanuel62@gmail.com",
         From : "umaemmanuel62@gmail.com",
-        Subject : subject.value,
+        Subject : "New message for the Critics company",
         Body : body1
     }).then(
       message => alert(message)
     ).catch(data => {
         alert('error')
     });
+    name1.value = '';
+    email.value = '';
+    subject.value = '';
+    message.value = '';
+
 })
 
 const f = '5A786BAF0F2606A3F2469D5746BD39659180';
