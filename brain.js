@@ -1,5 +1,7 @@
 const menuBtn = document.getElementById('menuBtn');
-const stuff = document.getElementById('stuff')
+const stuff = document.getElementById('stuff');
+const navIcons = document.querySelectorAll('.navIcons');
+
 
 menuBtn.addEventListener('click', e => {
     if(menuBtn.classList.contains('fa-bars')){
@@ -15,6 +17,13 @@ menuBtn.addEventListener('click', e => {
         menuBtn.classList.add('fa-bars');
         stuff.classList.toggle('active');
     }
+})
+navIcons.forEach(ele => {
+    ele.addEventListener('click', e => {
+        menuBtn.classList.remove('fa-times');
+        menuBtn.classList.add('fa-bars');
+        stuff.classList.toggle('active');
+    })
 })
 
 
