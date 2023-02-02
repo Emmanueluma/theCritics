@@ -31,7 +31,8 @@ btnS.addEventListener('click', e =>{
     const email = document.getElementById('email');
     const subject = document.getElementById('subject');
     const message = document.getElementById('message');
-    const body1 = 
+    const send = async () =>  {
+        const body1 = 
         `Name: ${name1.value} </br>
         Email address: ${email.value} </br>
         Subject: ${subject.value} </br>
@@ -50,6 +51,8 @@ btnS.addEventListener('click', e =>{
     ).catch(data => {
         alert('error')
     });
+    }
+    send();
     name1.value = '';
     email.value = '';
     subject.value = '';
