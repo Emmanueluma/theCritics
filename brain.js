@@ -2,30 +2,38 @@ const menuBtn = document.getElementById('menuBtn');
 const stuff = document.getElementById('stuff');
 const navIcons = document.querySelectorAll('.navIcons');
 const navIcons1 = document.querySelectorAll('.navIcons1');
-const nav = document.querySelector('.nav');
+const nav = document.querySelectorAll('.nav');
 const nav002 = document.querySelector('.nav002');
 const blur = document.querySelector('.blur');
-const flit = document.getElementById('flit');
+const blur1 = document.querySelector('.blur1');
+const flit = document.querySelectorAll('.flit');
 
 
 window.onscroll = function(){
-    if(window.pageYOffset > 200){
-        nav.style.backgroundColor = '#000';
-        /* nav002.style.color = '#fff'; */
-        blur.style.filter = 'blur(5px)';
-        flit.style.filter = 'invert(100%) sepia(0%) saturate(27%) hue-rotate(38deg) brightness(106%) contrast(107%)'
+    if(window.pageYOffset > 100){
         navIcons.forEach(ele => {
             ele.style.color = '#fff';
-     })
-    
-    }else {
-        nav.style.backgroundColor = 'transparent';
-        /* nav002.style.color = 'transparent'; */
-        blur.style.filter = 'blur(0px)';
-        flit.style.filter = 'none'
-        navIcons.forEach(ele => {
-               ele.style.color = '#000';
         })
+        flit.forEach(ele => {
+            ele.style.filter = 'invert(100%) sepia(0%) saturate(27%) hue-rotate(38deg) brightness(106%) contrast(107%)';
+        })
+        nav.forEach(ele => {
+            ele.style.backgroundColor = '#000';
+        })
+        blur.style.filter = 'blur(5px)';
+        
+    }else {
+        navIcons.forEach(ele => {
+            ele.style.color = '#000';
+        })
+        flit.forEach(ele => {
+            ele.style.filter = 'none';
+        })
+        nav.forEach(ele => {
+            ele.style.backgroundColor = 'transparent';
+        })
+        blur.style.filter = 'blur(0px)';
+        
     }
 }
 
