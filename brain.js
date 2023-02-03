@@ -1,21 +1,31 @@
 const menuBtn = document.getElementById('menuBtn');
 const stuff = document.getElementById('stuff');
 const navIcons = document.querySelectorAll('.navIcons');
+const navIcons1 = document.querySelectorAll('.navIcons1');
 const nav = document.querySelector('.nav');
 const nav002 = document.querySelector('.nav002');
 const blur = document.querySelector('.blur');
+const flit = document.getElementById('flit');
 
 
 window.onscroll = function(){
     if(window.pageYOffset > 200){
         nav.style.backgroundColor = '#000';
-        nav002.style.color = '#fff';
+        /* nav002.style.color = '#fff'; */
         blur.style.filter = 'blur(5px)';
+        flit.style.filter = 'invert(100%) sepia(0%) saturate(27%) hue-rotate(38deg) brightness(106%) contrast(107%)'
+        navIcons.forEach(ele => {
+            ele.style.color = '#fff';
+     })
     
     }else {
         nav.style.backgroundColor = 'transparent';
-        nav002.style.color = 'transparent';
-        blur.style.filter = 'blur(0px)'
+        /* nav002.style.color = 'transparent'; */
+        blur.style.filter = 'blur(0px)';
+        flit.style.filter = 'none'
+        navIcons.forEach(ele => {
+               ele.style.color = '#000';
+        })
     }
 }
 
@@ -34,7 +44,7 @@ menuBtn.addEventListener('click', e => {
         stuff.classList.toggle('active');
     }
 })
-navIcons.forEach(ele => {
+navIcons1.forEach(ele => {
     ele.addEventListener('click', e => {
         menuBtn.classList.remove('fa-times');
         menuBtn.classList.add('fa-bars');
@@ -101,4 +111,25 @@ popside.style.display = 'flex';
 popside.style.transform = 'translateX(-30%)';
 setTimeout(e => {
     popside.style.display = 'none';
-},2000)
+},2000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
