@@ -20,7 +20,12 @@ window.onscroll = function(){
         nav.forEach(ele => {
             ele.style.backgroundColor = '#000';
         })
-        blur.style.filter = 'blur(5px)';
+        try {
+            blur.style.filter = 'blur(5px)';
+        } catch (error) {
+            console.log(999)
+        }
+        
         
     }else {
         navIcons.forEach(ele => {
@@ -32,7 +37,12 @@ window.onscroll = function(){
         nav.forEach(ele => {
             ele.style.backgroundColor = 'transparent';
         })
-        blur.style.filter = 'blur(0px)';
+        try {
+            blur.style.filter = 'blur(0px)';
+        } catch (error) {
+            console.log(999)
+        }
+        
         
     }
 }
