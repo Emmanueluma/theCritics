@@ -233,7 +233,7 @@ main section.about .flex-container .flex-item.one {
     flex-direction: column;
 }
 main section.about .flex-container .flex-item.one p {
-    font-family: 'Kalam', cursive;
+    /* font-family: 'Kalam', cursive; */
     font-size: 1.7rem;
     margin-bottom: 1rem;
 }
