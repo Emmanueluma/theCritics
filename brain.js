@@ -99,13 +99,18 @@ try {
             Body : body1
         }).then(
           message => {
-            const popside = document.querySelector('.popside');
-            popside.style.display = 'flex';
-            popside.style.border = '2px solid #fff';
-            popside.textContent = 'sent';
-            setTimeout(e => {
-                popside.style.display = 'none';
-            },2000)
+            try {
+                const popside = document.querySelector('.popside');
+                popside.style.display = 'flex';
+                popside.style.border = '2px solid #fff';
+                popside.textContent = 'sent';
+                setTimeout(e => {
+                    popside.style.display = 'none';
+                },2000)
+            } catch (error) {
+                console.logg(9)
+            }
+            
         }).catch(data => {
             alert('error')
         });
@@ -125,29 +130,6 @@ try {
 
 //const f = '5A786BAF0F2606A3F2469D5746BD39659180';
 //const Password = ' d3782a77-1d2c-4f12-8850-c4913226cb27';
-
-
-
-
-const popside = document.querySelector('.popside');
-popside.style.display = 'flex';
-popside.style.transform = 'translateX(-30%)';
-setTimeout(e => {
-    popside.style.display = 'none';
-},2000);
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
