@@ -420,7 +420,7 @@ main section.news .grid-container1{
     margin: 0 auto;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: repeat(3,250px);
+    grid-template-rows: repeat(6,250px);
     grid-gap: 10px;
 }
 main section.news .grid-container1 .grid-item{
@@ -724,7 +724,7 @@ footer .grid-container .grid-items.three p {
     }
     main section.news .grid-container1{
         grid-template-columns: repeat(2, 50%);
-        grid-template-rows: repeat(2,250px);
+        grid-template-rows: repeat(3,250px);
     }
     main section.news .grid-container {
         grid-template-columns: repeat(2, 50%);
@@ -772,7 +772,7 @@ footer .grid-container .grid-items.three p {
     }
     main section.news .grid-container1{
         grid-template-columns: repeat(3, 33%);
-        grid-template-rows: repeat(1,250px);
+        grid-template-rows: repeat(2,250px);
     }
     main section.news .grid-container {
         grid-template-columns: repeat(3, 32%);
