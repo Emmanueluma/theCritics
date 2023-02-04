@@ -6,6 +6,7 @@ font-family: 'Kalam', cursive;
 italic and curs
 font-family: 'Sue Ellen Francisco', cursive;
 long and curs
+font-family: 'Montserrat', sans-serif;
 */
 *{
     padding: 0;
@@ -15,7 +16,7 @@ long and curs
     border: none;
     text-transform: capitalize;
     transition: .2s linear;
-    font-family: 'Contrail One', cursive;
+    font-family: 'Montserrat', sans-serif;
     text-decoration: none;
 }
 html {
