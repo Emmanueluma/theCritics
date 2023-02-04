@@ -204,7 +204,7 @@ main section.about {
     width: 100%;
 }
 main section h2{
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
 }
 main section h2,
 footer .grid-container .grid-items h2 {
@@ -677,7 +677,7 @@ footer .grid-container .grid-items.three p {
         padding: 30px;
     }
     main section h2 {
-        font-size: 8rem;
+        font-size: 6rem;
     }
     main section.contact {
         padding: 30px;
@@ -760,7 +760,7 @@ footer .grid-container .grid-items.three p {
 }
 @media screen and (min-width: 700px){
     main section.contact .flex-contanier .flex-item.two h1{
-        font-size: 7rem;
+        font-size: 5rem;
     }
 }
 @media screen and (min-width: 820px) {
