@@ -101,7 +101,8 @@ try {
           message => {
             const popside = document.querySelector('.popside');
             popside.style.display = 'flex';
-            popside.style.transform = 'translateX(-30%)';
+            popside.style.border = '2px solid #fff';
+            popside.textContent = 'sent';
             setTimeout(e => {
                 popside.style.display = 'none';
             },2000)
