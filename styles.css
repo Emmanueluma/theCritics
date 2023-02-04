@@ -198,7 +198,7 @@ header section.home img {
 }
 main section {
     text-align: center;
-    padding: 30px;
+    padding: 10px;
 }
 main section.about {
     width: 100%;
@@ -451,6 +451,50 @@ main section.news .grid-container .grid-item img {
     height: 100%;
     object-fit: cover;
 }
+main section.films {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, 400px);
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+main section.films .films-items{
+    width: 100%;
+    height: 100%;
+}
+main section.films .films-items a {
+    width: 100%;
+    height: 100%;
+}
+main section.films .films-items a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+main section.films .films-items:hover {
+    transform: translateY(-10px);
+}
+main section.iframe iframe{
+    width: 100%;
+    height: 70vh;
+}
+main section.iframe .credit {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(255, 0, 0, 0.782);
+    color: rgba(0, 0, 0, 0.782);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.9rem;
+    cursor: pointer;
+}
+main section.iframe .credit:hover {
+    background-color: #f00;
+    color: #000;
+}
 footer {
     padding: 30px 10px;
 }
@@ -621,6 +665,9 @@ footer .grid-container .grid-items.three p {
     footer .grid-container .grid-items h2{
         font-size: 6rem;
     }
+    main section {
+        padding: 30px;
+    }
     main section h2 {
         font-size: 8rem;
     }
@@ -663,6 +710,10 @@ footer .grid-container .grid-items.three p {
         grid-template-rows: repeat(2, 300px);
         justify-content: center;
         align-items: center;
+    }
+    main section.films {
+        grid-template-columns: repeat(2,50%);
+        grid-template-rows: repeat(2, 400px);
     }
     main section.news .grid-container1{
         grid-template-columns: repeat(2, 50%);
@@ -720,6 +771,10 @@ footer .grid-container .grid-items.three p {
         grid-template-columns: repeat(3, 32%);
         grid-template-rows: repeat(3, 300px);
     }
+    main section.films {
+        grid-template-columns: repeat(3, 32%);
+        grid-template-rows: repeat(2, 400px);
+    }
     footer .grid-container{
         grid-template-columns: repeat(3, 32%);
         grid-template-rows: repeat(1, 300px);
@@ -749,6 +804,10 @@ footer .grid-container .grid-items.three p {
     main section.instagram .grid-container{
         grid-template-columns: repeat(4, 24%);
         grid-template-rows: repeat(1, 300px);
+    }
+    main section.films {
+        grid-template-columns: repeat(4, 24%);
+        grid-template-rows: repeat(1, 400px);
     }
 }
 @media screen and (min-width:1080px) {

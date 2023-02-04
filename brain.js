@@ -23,7 +23,7 @@ window.onscroll = function(){
         try {
             blur.style.filter = 'blur(5px)';
         } catch (error) {
-            console.log(999)
+            console.log(error)
         }
         
         
@@ -40,7 +40,7 @@ window.onscroll = function(){
         try {
             blur.style.filter = 'blur(0px)';
         } catch (error) {
-            console.log(999)
+            console.log(error)
         }
         
         
@@ -78,43 +78,47 @@ const email = document.getElementById('email');
 const subject = document.getElementById('subject');
 const message = document.getElementById('message');
 
-form.addEventListener('submit', e => {
-    e.preventDefault();
-
-    const send = async () =>  {
-        const body1 = 
-        `Name: ${name1.value} </br>
-        Email address: ${email.value} </br>
-        Subject: ${subject.value} </br>
-        message: ${message.value}
-        `;
-        /* console.log(name1.value,email.value,subject.value,message.value) */
-    e.preventDefault();
-    Email.send({
-        SecureToken : "d3782a77-1d2c-4f12-8850-c4913226cb27",
-        To : "umaemmanuel62@gmail.com",
-        From : "umaemmanuel62@gmail.com",
-        Subject : "New message for the Critics company",
-        Body : body1
-    }).then(
-      message => {
-        const popside = document.querySelector('.popside');
-        popside.style.display = 'flex';
-        popside.style.transform = 'translateX(-30%)';
-        setTimeout(e => {
-            popside.style.display = 'none';
-        },2000)
-    }).catch(data => {
-        alert('error')
-    });
-    }
-    send();
-
-    name1.value = '';
-    email.value = '';
-    subject.value = '';
-    message.value = '';
-})
+try {
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+    
+        const send = async () =>  {
+            const body1 = 
+            `Name: ${name1.value} </br>
+            Email address: ${email.value} </br>
+            Subject: ${subject.value} </br>
+            message: ${message.value}
+            `;
+            /* console.log(name1.value,email.value,subject.value,message.value) */
+        e.preventDefault();
+        Email.send({
+            SecureToken : "d3782a77-1d2c-4f12-8850-c4913226cb27",
+            To : "umaemmanuel62@gmail.com",
+            From : "umaemmanuel62@gmail.com",
+            Subject : "New message for the Critics company",
+            Body : body1
+        }).then(
+          message => {
+            const popside = document.querySelector('.popside');
+            popside.style.display = 'flex';
+            popside.style.transform = 'translateX(-30%)';
+            setTimeout(e => {
+                popside.style.display = 'none';
+            },2000)
+        }).catch(data => {
+            alert('error')
+        });
+        }
+        send();
+    
+        name1.value = '';
+        email.value = '';
+        subject.value = '';
+        message.value = '';
+    })
+} catch (error) {
+    console.log('9');
+}
 
 
 
