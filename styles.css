@@ -511,7 +511,7 @@ footer .grid-container{
     width: 100%;
     display: grid;
     grid-template-columns: repeat(1, 98%);
-    grid-template-rows: 130px 300px minmax(130px, auto);
+    grid-template-rows: repeat(2, 130px);
     justify-content: center;
     align-items: center;
     grid-gap: 10px;
@@ -785,7 +785,7 @@ footer .grid-container .grid-items.three p {
         grid-template-rows: repeat(2, 400px);
     }
     footer .grid-container{
-        grid-template-columns: repeat(3, 32%);
+        grid-template-columns: repeat(2, 48%);
         grid-template-rows: repeat(1, 300px);
     }
 }
