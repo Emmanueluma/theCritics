@@ -150,7 +150,8 @@ header nav .stuff.active {
 }
 header nav .stuff a{
     font-size: 4rem;
-    font-family: 'Kalam', cursive;
+    font-weight: 700;
+    /* font-family: 'Kalam', cursive; */
     color: rgba(255, 255, 255, 0.719);
 }
 header nav .stuff a:hover {
@@ -163,7 +164,11 @@ header nav .stuff a p {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    font-family: 'Contrail One', cursive;
     z-index: -1;
+    display: inline;
+    width: 100%;
+    text-align: center;
     display: none;
 }
 header nav .stuff a.home:hover p.home1 {
@@ -172,12 +177,6 @@ header nav .stuff a.home:hover p.home1 {
 header nav .stuff a.about:hover p.about1 {
     display: block;
 }
-/* header nav .stuff a.contact:hover p.contact1 {
-    display: block;
-}
-header nav .stuff a.instagram:hover p.instagram1 {
-    display: block;
-} */
 header nav .stuff a.youtube:hover p.youtube1 {
     display: block;
 }
@@ -218,11 +217,9 @@ main section.about .flex-container {
     flex-direction: column;
     width: 100%;
     height: auto;
-    /* border: 2px solid #fff; */
 }
 main section.about .flex-container .flex-item{
     width: 100%;
-    /* border: 2px solid #f00; */
 }
 main section.about .flex-container .flex-item.one {
     height: auto;
@@ -426,7 +423,7 @@ main section.news .grid-container1{
     margin: 0 auto;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: repeat(6,250px);
+    grid-template-rows: repeat(4,250px);
     grid-gap: 10px;
 }
 main section.news .grid-container1 .grid-item{
@@ -551,9 +548,6 @@ footer .grid-container .grid-items.two img.glitter1 {
     height: 100%;
     object-fit: cover;
 }
-/* footer .grid-container .grid-items.two img.glitter0{
-    animation: glitter 2s ease-in infinite ;
-} */
 footer .grid-container .grid-items.two img.glitter{
     position: absolute;
     top: 10px;
@@ -563,65 +557,7 @@ footer .grid-container .grid-items.two img.glitter{
 footer .grid-container .grid-items.two img.glitter1 {
     display: none;
 }
-/* footer .grid-container .grid-items.two img.glitter1{
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    animation: glitter1 2s ease-in infinite ;
-    display: none;
-} */
-/* @keyframes glitter {
-    0% {
-        opacity: 0;
-    }
-    10%{
-        opacity: 0.8;
-    }
-    20%{
-        opacity: 0.4;
-    }
-    30%{
-        opacity: 0.3;
-    }
-    40%{
-        opacity: 0.4;
-    }
-    50%{
-        opacity: 0.9;
-    }
-    60%{
-        opacity: 1;
-    }
-    70%{
-        opacity: 0.4;
-    }
-    80%{
-        opacity: 0.9;
-    }
-    90%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0.3s;
-    }
-}
-@keyframes glitter1 {
-    0%{
-        opacity: 1;
-    }
-    20%{
-        opacity: 0;
-    }
-    30%{
-        opacity: 1;
-    }
-    90%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 0.3;
-    }
-} */
+
 footer .grid-container .grid-items.three {
     display: flex;
     justify-content: center;
@@ -730,7 +666,7 @@ footer .grid-container .grid-items.three p {
     }
     main section.news .grid-container1{
         grid-template-columns: repeat(2, 50%);
-        grid-template-rows: repeat(3,250px);
+        grid-template-rows: repeat(2,250px);
     }
     main section.news .grid-container {
         grid-template-columns: repeat(2, 50%);
@@ -821,6 +757,10 @@ footer .grid-container .grid-items.three p {
     main section.films {
         grid-template-columns: repeat(4, 24%);
         grid-template-rows: repeat(1, 400px);
+    }
+    main section.news .grid-container1{
+        grid-template-columns: repeat(4, 24%);
+        grid-template-rows: repeat(1,250px);
     }
 }
 @media screen and (min-width:1080px) {
