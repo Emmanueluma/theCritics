@@ -7,7 +7,25 @@ const nav002 = document.querySelector('.nav002');
 const blur = document.querySelector('.blur');
 const blur1 = document.querySelector('.blur1');
 const flit = document.querySelectorAll('.flit');
+const seeMore = document.querySelector('.see--more');
+const seeLess = document.querySelector('.see--less');
+const bio = document.querySelector('.bio');
 
+
+seeMore.addEventListener('click', () => {
+    if(seeMore.textContent === 'see more >>>') {
+        seeMore.textContent = 'see less >>>';
+        bio.classList.toggle('active');
+    } else {
+        seeMore.textContent = 'see more >>>';
+        bio.classList.toggle('active');
+    }
+})
+
+seeLess.addEventListener('click', ()=> {
+    bio.classList.toggle('active');
+    seeMore.textContent = 'see more >>>';
+})
 
 window.onscroll = function(){
     if(window.pageYOffset > 100){
@@ -125,16 +143,5 @@ try {
 } catch (error) {
     console.log('9');
 }
-
-
-
-//const f = '5A786BAF0F2606A3F2469D5746BD39659180';
-//const Password = ' d3782a77-1d2c-4f12-8850-c4913226cb27';
-
-
-
-
-
-
 
 
