@@ -269,10 +269,16 @@ main section.about section.bio {
     padding: 0;
     transition: all .3s;
 }
+main section.about section.bio h2{
+    font-size: 1rem;
+}
 main section.about section.bio.active {
     padding: 30px;
     height: auto;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+main section.about section.bio.active h2 {
+    font-size: 6rem;
 }
 main section.about section.bio .flex--container{
     width: 100%;
@@ -281,6 +287,7 @@ main section.about section.bio .flex--container{
     align-items: center;
     flex-direction: column;
     margin-bottom: 2rem;
+    gap: 20px;
 }
 main section.about section.bio.active .flex--container .flex--item{
     /* border: 2px solid #00f; */
@@ -291,6 +298,19 @@ main section.about section.bio.active .flex--container .flex--item{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+main section.about section.bio.active .flex--container .flex--item .img--container{
+    width: 100%;
+    height: 100%;
+}
+main section.about section.bio.active .flex--container .flex--item .img--container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position:top;
+}
+main section.about section.bio .flex--container .flex--item p{
+    text-transform: none;
 }
 main section.about section.bio .flex--container .flex--item p a{
     color: #fff;

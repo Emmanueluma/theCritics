@@ -51,20 +51,25 @@ window.onscroll = function(){
         
     }
 }
-seeMore.addEventListener('click', () => {
-    if(seeMore.textContent === 'see more >>>') {
-        seeMore.textContent = 'see less >>>';
+try {
+    seeMore.addEventListener('click', () => {
+        if(seeMore.textContent === 'see more >>>') {
+            seeMore.textContent = 'see less >>>';
+            bio.classList.toggle('active');
+        } else {
+            seeMore.textContent = 'see more >>>';
+            bio.classList.toggle('active');
+        }
+    })
+    
+    seeLess.addEventListener('click', ()=> {
         bio.classList.toggle('active');
-    } else {
         seeMore.textContent = 'see more >>>';
-        bio.classList.toggle('active');
-    }
-})
+    })
+} catch (error) {
+    console.log('')
+}
 
-seeLess.addEventListener('click', ()=> {
-    bio.classList.toggle('active');
-    seeMore.textContent = 'see more >>>';
-})
 menuBtn.addEventListener('click', e => {
     if(menuBtn.classList.contains('fa-bars')){
         menuBtn.style.transform = 'rotate(0deg)';
