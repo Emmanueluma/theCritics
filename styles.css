@@ -44,7 +44,7 @@ body section#pc {
 }
 header{
     width: 100%;
-    height: 85vh;
+    height: 94vh;
     position: relative;
 }
 .header{
@@ -152,10 +152,10 @@ header nav .stuff.active {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 header nav .stuff a{
-    font-size: 4rem;
-    font-weight: 700;
-    /* font-family: 'Kalam', cursive; */
+    font-size: 3rem;
+    font-weight: 500;
     color: rgba(255, 255, 255, 0.719);
+    margin-bottom: 2rem;
 }
 header nav .stuff a:hover {
     color: #fff;
@@ -174,6 +174,10 @@ header nav .stuff a p {
     text-align: center;
     display: none;
 }
+header nav .stuff a.youtube{
+    color: #f00;
+    font-size: 4rem;
+}
 header nav .stuff a.home:hover p.home1 {
     display: block;
 }
@@ -187,7 +191,6 @@ header nav .stuff a.films:hover p.films1 {
     display: block;
 }
 header section.home{
-    /* border: 2px solid #f00; */
     margin-top: 150px;
     width: 100%;
     height: calc(100vh - 150px);
@@ -200,20 +203,18 @@ header section.home img {
 }
 main section {
     text-align: center;
-    padding: 10px;
+    padding: 30px 10px;
 }
 main section.about {
     width: 100%;
     text-align: left;
 }
-main section h2{
-    margin-bottom: 2.5rem;
-    text-transform: uppercase;
-    text-align: center;
-}
 main section h2,
-footer .grid-container .grid-items h2 {
-    font-size: 4rem;
+main section.about section.bio.active h2,
+footer .grid-container .grid-items.one .h2 {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    text-align: center;
 }
 main section.about .flex-container {
     display: flex;
@@ -237,7 +238,6 @@ main section.about .flex-container .flex-item.one {
     flex-direction: column;
 }
 main section.about .flex-container .flex-item.one p {
-    /* font-family: 'Kalam', cursive; */
     font-size: 1.7rem;
     margin-bottom: 1rem;
     text-transform: lowercase;
@@ -276,9 +276,6 @@ main section.about section.bio.active {
     padding: 30px;
     height: auto;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-main section.about section.bio.active h2 {
-    font-size: 6rem;
 }
 main section.about section.bio .flex--container{
     width: 100%;
@@ -363,7 +360,8 @@ main section.contact .flex-contanier .flex-item.one iframe{
     height: 100%;
 }
 main section.contact .flex-contanier .flex-item.two h1{
-    font-size: 4rem;
+    font-size: 2rem;
+    margin-top: 1rem;
 }
 main section.contact .flex-contanier .flex-item.two .form001{
     width: 100%;
@@ -488,10 +486,14 @@ main section.instagram .follow:hover {
 main section.instagram .follow:hover .left{
     width: 100%;
 }
+main section.news{
+    padding-top: 20px;
+}
 main section.news iframe{
     width: 100%;
     height: 500px;
     margin-bottom: 2rem;
+    margin-top: 1.2rem;
 }
 main section.news h4{
     font-size: 3.8rem;
@@ -508,15 +510,40 @@ main section.news .grid-container1{
 main section.news .grid-container1 .grid-item{
     width: 100%;
     height: 100%;
+    position: relative;
 }
-main section.news .grid-container1 .grid-item a {
+main section.news .grid-container1 .grid-item a div{
     width: 100%;
     height: 100%;
 }
-main section.news .grid-container1 .grid-item a img {
+main section.news .grid-container1 .grid-item a div img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+main section.news .grid-container1 .grid-item a div div.hoverNews{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.862);
+    z-index: 100;
+    opacity: 0;
+}
+main section.news .grid-container1 .grid-item a div div.hoverNews p {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+main section.news .grid-container1 .grid-item a:hover div.hoverNews{
+    opacity: 1;
+}
+main section.news .grid-container1 .grid-item a:hover div.hoverNews p{
+    font-size: 2rem;
 }
 main section.news .grid-container {
     width: 100%;
@@ -600,8 +627,12 @@ footer .grid-container .grid-items {
     width: 100%;
     height: 100%;
 }
-footer .grid-container .grid-items h2 {
+footer .grid-container .grid-items.one .h2 {
+    font-size: 2.7rem;
     margin-bottom: 2rem;
+}
+footer .grid-container .grid-items.one a:hover {
+    font-size: 3.7rem;
 }
 footer .grid-container .grid-items.one {
     display: flex;
@@ -613,9 +644,6 @@ footer .grid-container .grid-items.one a {
     font-size: 2.5rem;
     color: #fff;
     font-family: 'Kalam', cursive;
-}
-footer .grid-container .grid-items.one a:hover {
-    font-size: 2.7rem;
 }
 footer .grid-container .grid-items.two{
     position: relative;
@@ -643,6 +671,7 @@ footer .grid-container .grid-items.three {
     align-items: center;
     flex-direction: column;
     font-size: 2rem;
+    text-align: center;
 }
 footer .grid-container .grid-items.three .grid {
     margin: 1rem;
@@ -683,12 +712,24 @@ footer .grid-container .grid-items.three p {
         width: 100%;
         height: 100%;
         object-fit: contain;
-        /* filter: invert(100%) sepia(0%) saturate(27%) hue-rotate(38deg) brightness(106%) contrast(107%); */
+    }
+    body section#pc .navbar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
     }
     body section#pc a {
-        font-size: 2rem;
+        font-size: 1.6rem;
         color: #000;
         margin: 2rem;
+    }
+    body section#pc a.fa-youtube{
+        color: #f00;
+        font-size: 5rem;
+    }
+    header{
+        height: 91vh;
     }
     footer .grid-container .grid-items h2{
         font-size: 6rem;
@@ -696,8 +737,9 @@ footer .grid-container .grid-items.three p {
     main section {
         padding: 30px;
     }
-    main section h2 {
-        font-size: 6rem;
+    main section h2,
+    main section.about section.bio.active h2 {
+        font-size: 3.5rem;
     }
     main section.contact {
         padding: 30px;
@@ -723,6 +765,9 @@ footer .grid-container .grid-items.three p {
     }
     main section.contact .flex-contanier .flex-item.two .form001 textarea{
         height: 60px;
+    }
+    main section.news iframe{
+        width: 50%;
     }
     main section.instagram .follow {
         width: 480px;
@@ -779,8 +824,12 @@ footer .grid-container .grid-items.three p {
     }
 }
 @media screen and (min-width: 700px){
+    main section h2,
+    main section.about section.bio.active h2 {
+        font-size: 4.5rem;
+    }
     main section.contact .flex-contanier .flex-item.two h1{
-        font-size: 5rem;
+        font-size: 4rem;
     }
     main section.about section.bio .flex--container.second,
     main section.about section.bio .flex--container.fourth{
