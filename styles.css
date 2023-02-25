@@ -1,13 +1,3 @@
-/* 
-font
-font-family: 'Contrail One', cursive;
-formal
-font-family: 'Kalam', cursive;
-italic and curs
-font-family: 'Sue Ellen Francisco', cursive;
-long and curs
-font-family: 'Montserrat', sans-serif;
-*/
 *{
     padding: 0;
     margin: 0;
@@ -58,6 +48,7 @@ header{
 button{
     cursor: pointer;
 }
+
 header p.popside {
     display: none;
     justify-content: center;
@@ -120,9 +111,6 @@ header nav {
     z-index: 9999999999999999999999999999999999999999999999999999999999999999;
 }
 header nav button {
-    /* position: absolute;
-    top: 15px;
-    left: 30px; */
     color: #fff;
     background-color: transparent;
     font-size: 3rem;
@@ -287,7 +275,6 @@ main section.about section.bio .flex--container{
     gap: 20px;
 }
 main section.about section.bio.active .flex--container .flex--item{
-    /* border: 2px solid #00f; */
     width: 100%;
     height: 400px;
     font-size: 1.7rem;
@@ -308,6 +295,18 @@ main section.about section.bio.active .flex--container .flex--item .img--contain
 }
 main section.about section.bio .flex--container .flex--item p{
     text-transform: none;
+    max-height: 350px;
+    overflow-y: scroll;
+}
+main section.about section.bio .flex--container .flex--item p::-webkit-scrollbar {
+    width: .5rem;
+}
+main section.about section.bio .flex--container .flex--item p::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius: 10px;
+}
+main section.about section.bio .flex--container .flex--item p::-webkit-scrollbar-thumb {
+    background: #000000;
 }
 main section.about section.bio .flex--container .flex--item p a{
     color: #fff;
@@ -648,23 +647,6 @@ footer .grid-container .grid-items.one a {
 footer .grid-container .grid-items.two{
     position: relative;
 }
-footer .grid-container .grid-items.two img,
-footer .grid-container .grid-items.two img.glitter1 {
-    filter: invert(100%) sepia(0%) saturate(27%) hue-rotate(38deg) brightness(106%) contrast(107%);
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-footer .grid-container .grid-items.two img.glitter{
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    filter: blur(10px);
-}
-footer .grid-container .grid-items.two img.glitter1 {
-    display: none;
-}
-
 footer .grid-container .grid-items.three {
     display: flex;
     justify-content: center;
@@ -745,7 +727,7 @@ footer .grid-container .grid-items.three p {
         padding: 30px;
     }
     main section.contact .flex-contanier .flex-item.two h1{
-        font-size: 5rem;
+        font-size: 3rem;
     }
     main section.contact .flex-contanier{
         flex-direction: row;
@@ -774,6 +756,7 @@ footer .grid-container .grid-items.three p {
         font-size: 2.3rem;
     }
 }
+
 @media screen and (min-width: 600px) {
     main section.instagram{
         padding: 30px 50px;
@@ -818,24 +801,24 @@ footer .grid-container .grid-items.three p {
 
 
 }
+
 @media screen and (min-width: 690px) and (max-width:1080px) {
     main section.contact .flex-contanier .flex-item.two .form001{
         height: 70%;
     }
 }
+
 @media screen and (min-width: 700px){
     main section h2,
     main section.about section.bio.active h2 {
         font-size: 4.5rem;
-    }
-    main section.contact .flex-contanier .flex-item.two h1{
-        font-size: 4rem;
     }
     main section.about section.bio .flex--container.second,
     main section.about section.bio .flex--container.fourth{
         flex-direction: row;
     }
 }
+
 @media screen and (min-width: 820px) {
     main section.about .flex-container .flex-item.two img{
         object-fit: fill;
@@ -867,6 +850,7 @@ footer .grid-container .grid-items.three p {
         grid-template-rows: repeat(1, 300px);
     }
 }
+
 @media screen and (min-width: 1400px) {
     main section.about .flex-container {
         width: 100%;
@@ -901,10 +885,9 @@ footer .grid-container .grid-items.three p {
         grid-template-rows: repeat(1,250px);
     }
 }
+
 @media screen and (min-width:1080px) {
     main section.contact .flex-contanier .flex-item.two .form001{
         height: 85%;
     }
 }
-
-/* dynamo: beyond belief */

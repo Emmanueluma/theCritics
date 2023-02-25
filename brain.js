@@ -61,7 +61,6 @@ try {
             bio.classList.toggle('active');
         }
     })
-    
     seeLess.addEventListener('click', ()=> {
         bio.classList.toggle('active');
         seeMore.textContent = 'see more >>>';
@@ -94,7 +93,7 @@ navIcons1.forEach(ele => {
 })
 
 
-const btnS =document.getElementById('btnS');
+const btnS = document.getElementById('btnS');
 const form =  document.getElementById('form')
 const name1 = document.getElementById('name');
 const email = document.getElementById('email');
@@ -112,7 +111,6 @@ try {
             Subject: ${subject.value} </br>
             message: ${message.value}
             `;
-            /* console.log(name1.value,email.value,subject.value,message.value) */
         e.preventDefault();
         Email.send({
             SecureToken : "d3782a77-1d2c-4f12-8850-c4913226cb27",
@@ -148,5 +146,3 @@ try {
 } catch (error) {
     console.log('9');
 }
-
-
