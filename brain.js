@@ -24,6 +24,7 @@ window.onscroll = function(){
         })
         nav.forEach(ele => {
             ele.style.backgroundColor = '#000';
+            ele.style.boxShadow = '0 0 4px 3px #00000049'
         })
         try {
             blur.style.filter = 'blur(5px)';
@@ -41,6 +42,7 @@ window.onscroll = function(){
         })
         nav.forEach(ele => {
             ele.style.backgroundColor = 'transparent';
+            ele.style.boxShadow = '0 0 4px 3px transparent'
         })
         try {
             blur.style.filter = 'blur(0px)';
