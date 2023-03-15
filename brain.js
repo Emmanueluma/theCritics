@@ -9,15 +9,13 @@ const blur1 = document.querySelector('.blur1');
 const flit = document.querySelectorAll('.flit');
 const seeMore = document.querySelector('.see--more');
 const seeLess = document.querySelector('.see--less');
-const bio = document.querySelector('.bio');
-
-
-
+const youtube = document.querySelectorAll('.fa-youtube')
 
 window.onscroll = function(){
     if(window.pageYOffset > 100){
         navIcons.forEach(ele => {
             ele.style.color = '#fff';
+            youtube[0].style.color = '#fff';
         })
         flit.forEach(ele => {
             ele.style.filter = 'invert(100%) sepia(0%) saturate(27%) hue-rotate(38deg) brightness(106%) contrast(107%)';
@@ -36,6 +34,7 @@ window.onscroll = function(){
     }else {
         navIcons.forEach(ele => {
             ele.style.color = '#000';
+            youtube[0].style.color = '#000';
         })
         flit.forEach(ele => {
             ele.style.filter = 'none';
@@ -53,7 +52,7 @@ window.onscroll = function(){
         
     }
 }
-try {
+/* try {
     seeMore.addEventListener('click', () => {
         if(seeMore.textContent === 'see more >>>') {
             seeMore.textContent = 'see less >>>';
@@ -69,7 +68,7 @@ try {
     })
 } catch (error) {
     console.log('')
-}
+} */
 
 menuBtn.addEventListener('click', e => {
     if(menuBtn.classList.contains('fa-bars')){
