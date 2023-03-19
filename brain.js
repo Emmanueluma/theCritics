@@ -52,24 +52,6 @@ window.onscroll = function(){
         
     }
 }
-/* try {
-    seeMore.addEventListener('click', () => {
-        if(seeMore.textContent === 'see more >>>') {
-            seeMore.textContent = 'see less >>>';
-            bio.classList.toggle('active');
-        } else {
-            seeMore.textContent = 'see more >>>';
-            bio.classList.toggle('active');
-        }
-    })
-    seeLess.addEventListener('click', ()=> {
-        bio.classList.toggle('active');
-        seeMore.textContent = 'see more >>>';
-    })
-} catch (error) {
-    console.log('')
-} */
-
 menuBtn.addEventListener('click', e => {
     if(menuBtn.classList.contains('fa-bars')){
         menuBtn.style.transform = 'rotate(0deg)';
