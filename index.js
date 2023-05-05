@@ -1,5 +1,5 @@
 const youtubeApi = document.querySelector('.youtubeApi-container');
-console.log(youtubeApi)
+/* console.log(youtubeApi) */
 const v = 'https://www.youtube.com/watch?v=';
 const key = 'AIzaSyDItEu4dUQISg77wPjpHhMyVFvsQsnuFJs';
 fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UComu3ao5983Wpni7R_JcovQ&maxResults=4&order=date&key=${key}`).then(

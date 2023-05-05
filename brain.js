@@ -26,7 +26,6 @@ window.onscroll = function(){
             ele.style.boxShadow = '0 0 4px 3px #00000049'
         })
         try {
-            whoAre.classList.add('active');
             blur.style.filter = 'blur(5px)';
         } catch (error) {
             console.log("")
@@ -46,7 +45,6 @@ window.onscroll = function(){
             ele.style.boxShadow = '0 0 4px 3px transparent'
         })
         try {
-            whoAre.classList.remove('active');
             blur.style.filter = 'blur(0px)';
         } catch (error) {
             console.log("")

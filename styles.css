@@ -43,7 +43,7 @@ header{
     position: relative;
 }
 .header.about{
-    height: 50px;
+    height: 0px;
 }
 .blur1 {
     filter: blur(10px);
@@ -124,7 +124,7 @@ header .overlay001 .logo a.active{
     color: #fff;
     opacity: 1;
 }
-header nav {
+header nav, section.nav1{
     padding: 30px;
     width: 60px;
     height: 60px;
@@ -258,6 +258,9 @@ main section.about .flex-container .flex-item.one {
     align-items: center;
     flex-direction: column;
 }
+main section.about .flex-container .flex-item.one.one--left{
+    align-items: flex-start;
+}
 main section.about .flex-container .flex-item.one p {
     font-size: 1.7rem;
     margin-bottom: 1rem;
@@ -265,6 +268,10 @@ main section.about .flex-container .flex-item.one p {
 }
 main section.about .flex-container .flex-item.one p span{
     text-transform: uppercase;
+}
+main section.about .flex-container .flex-item.one a{
+    margin: 0;
+    margin-bottom: 1rem;
 }
 main section.about .flex-container .flex-item.two{
     width: 100%;
@@ -490,7 +497,7 @@ main section.instagram .grid-container .grid-items:hover .hover a {
     font-size: 1.8rem;
     opacity: 1;
 }
-main section.instagram .follow {
+main section .follow {
     width: 80%;
     height: 80px;
     display: flex;
@@ -502,6 +509,28 @@ main section.instagram .follow {
     font-size: 1.5rem;
     position: relative;
     border-right: none;
+}
+main section.about .follow{
+    position: relative;
+    margin-bottom: 1rem;
+}
+main section.about .follow:hover{
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main section.about .follow .left{
+    height: 100%;
+    width: 1px;
+    z-index: -2;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+main section.about .follow:hover .left{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.932);
 }
 main section.instagram .follow i {
     margin-left: 1rem;
@@ -751,6 +780,8 @@ footer .grid-container .grid-items.three p {
 }
 
 
+ 
+
 @media screen and (min-width: 500px){
     #navPhone {
         display: none;
@@ -834,9 +865,16 @@ footer .grid-container .grid-items.three p {
     main section.news iframe{
         width: 50%;
     }
-    main section.instagram .follow {
+    main section .follow {
         width: 480px;
         font-size: 2.3rem;
+    }
+    section.nav1#pc{
+        top: 0;
+        background-color: #000;
+    }
+    section.nav1#pc div.navbar a {
+        color: #fff;
     }
 }
 
