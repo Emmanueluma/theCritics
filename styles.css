@@ -1014,56 +1014,17 @@ footer .grid-container .grid-items.three p {
     }
 }
 
-
-
-
-@media only screen and (min-width: 1800px) {
-    body section#pc a {
-        font-size: 2.2rem;
+@media only screen and (min-width: 1700px) {
+    header{
+        max-width: 1700px;
+        margin: 0 auto;
     }
-    header .overlay001 .logo {
-        width: 450px;
-        height: 400px;
+    main{
+        max-width: 1700px;
+        margin: 0 auto;
     }
-    main section.about .flex-container{
-        height: 50vh;
-    }
-    main section.about .flex-container .flex-item.one{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-direction: column;
-    }
-    main section.about .flex-container .flex-item.one p{
-        font-size: 2rem;
-    }
-    main section.instagram .grid-container{
-        grid-template-columns: repeat(4, 24%);
-        grid-template-rows: repeat(1, 30vh);
-        justify-content: space-between;
-    }
-    main section.about section.bio .flex--container {
-        height: 40vh;
-    }
-    main section.about section.bio .flex--container .flex--item {
-        height: 100%;
-        font-size: 2.1rem;
-    }
-    main section.contact .flex-contanier .flex-item.two .form001 ::placeholder{
-        font-size: 2.2rem;
-    }
-    main section.films {
-        margin-top: 100px;
-        grid-template-rows: repeat(1, 40vh);
-    }
-    main section.films .films-items a{
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
-    main section.films .films-items a img{
-        width: 100%;
-        height: 100%;
-        object-fit: fill;
+    footer{
+        max-width: 1700px;
+        margin: 0 auto;
     }
 }
