@@ -624,7 +624,7 @@ main section.instagram .grid-container.youtubeApi-container .grid-item{
     width: 100%;
     height: 100%;
     position: relative;
-    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+    /* clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%); */
 }
 main section.instagram .grid-container.youtubeApi-container .grid-item a{
     width: 100%;
