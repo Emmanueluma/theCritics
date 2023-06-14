@@ -554,6 +554,64 @@ main section.instagram .follow:hover {
 main section.instagram .follow:hover .left{
     width: 100%;
 }
+main section .follow1 {
+    width: 200px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border: 2px solid rgba(255, 255, 255, 0.589);
+    color: #fff;
+    font-size: 1.5rem;
+    position: relative;
+}
+main section.about .follow1{
+    position: relative;
+    margin-bottom: 1rem;
+}
+main section.about .follow1:hover{
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main section.about .follow1 .left{
+    height: 100%;
+    width: 1px;
+    z-index: -2;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+main section.about .follow1:hover .left{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.932);
+}
+main section.instagram .follow1 i {
+    margin-left: 1rem;
+}
+main section.instagram .follow1 i.youtube--btn{
+    font-size: 4rem;
+}
+main section.instagram .follow1 .left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+}
+main section.instagram .follow1:hover {
+    color: #000;
+    border-left: none;
+    
+}
+main section.instagram .follow1:hover .left{
+    width: 100%;
+}
+
 main section.instagram .grid-container.youtubeApi-container .grid-item{
     width: 100%;
     height: 100%;
@@ -774,9 +832,52 @@ footer .grid-container .grid-items.three .grid a:hover {
 }
 footer .grid-container .grid-items.three p {
     margin-top: 8rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.568);
 }
+footer .grid-container .grid-items.three p a{
+    color: rgba(255, 255, 255, 0.568);
+}
+
+
+footer .grid-container1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 10px;
+}
+footer .grid-container1 .grid-items {
+    width: 100%;
+    height: 100%;
+}
+footer .grid-container1 .grid-items.three {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2rem;
+    text-align: center;
+}
+footer .grid-container1 .grid-items.three .grid {
+    margin: 1rem;
+}
+footer .grid-container1 .grid-items.three .grid a {
+    color: #fff;
+    margin: 0 1rem;
+}
+footer .grid-container1 .grid-items.three .grid a:hover {
+    font-size: 3rem;
+}
+footer .grid-container1 .grid-items.three p {
+    margin-top: 8rem;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.568);
+}
+footer .grid-container1 .grid-items.three p a{
+    color: rgba(255, 255, 255, 0.568);
+}
+
 
 
  
@@ -918,9 +1019,6 @@ footer .grid-container .grid-items.three p {
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    footer .grid-container .grid-items.three p {
-        font-size: 2rem;
     }
 }
 
